@@ -41,10 +41,17 @@ Example:
 The Hermite and the OMOM deg. 4 will be applied to I. The output Ix2 will be of size 2N x 2N x 5. Thus `Ix2(:,:P,1)` is the resulting zoom using Hermite, `Ix2(:,:P,5)` is the resulting zoom using OMOM4, whereas `Ix2(:,:P,2)`, `Ix2(:,:P,3)`, `Ix2(:,:P,4)` contain zeros.  
 
 1. `example1.m`: simple script that reads an image and invokes `image2D_zoom_final_fun`.
-2. `example2.m`: more versatile script that subsamples an image, uses it as ground truth, generates the zoomed image (from the subsampled one) and calculates the Mean Absolute Error (MAE) and PSNR.
+2. `example2.m`: more versatile script that subsamples an image [3], uses it as ground truth, generates the zoomed image (from the subsampled one) and calculates the Mean Absolute Error (MAE) and PSNR.
 
-References
+## License and citations
+In addition to the GNU license in the relevant file of this repository, the following hold. 
+1. Anyone can freely use, or modify this code for research purposes, provided that this repository is cited and the References [1] and [2] are also cited.
+2. Despite the great effort we spent in developing theory and implementing this code, no warranties of any kind are provided, related to this repository. Anyone who uses this code, does so on his/her own responsibility. The authors of this code and relevant publications will never accept any kind of liability steming from using this code in any way.
+
+##References
 
 [1] Kechriniotis, A. I., Delibasis, K. K., Oikonomou, I., & Tsigaridas, G. N. (2024). Classical multivariate Hermite coordinate interpolation on n-dimensional grids. Journal of Computational and Applied Mathematics, 449, 115962.
 
 [2] Delibasis, K. K., Oikonomou, I., Kechriniotis, A. I., & Tsigaridas, G. N. (2024). Hermite coordinate interpolation kernels: application to image zooming. arXiv preprint arXiv:2403.13195.
+
+[3] https://www.mathworks.com/matlabcentral/fileexchange/6748-subsampling-input-n
