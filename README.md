@@ -1,5 +1,5 @@
 # Image 2x-zooming kernels
-This code calculates the kernels of several interpolation methods for 2D image zooming 2x. Most of the methods are well known. However we also provide the kernels for a least utilized method: Hermite coordinate interpolation.
+This code calculates the kernels of several interpolation methods for 2D image zooming 2x. Most of the methods are well known. However we also provide the kernels for a least utilized method: __Hermite coordinate interpolation__.
 The generic concept of 2x image zooming with convolution-based interpolation entails 3 kernels as shown in the Fig. below.
 ![Fig1_3kernels](https://github.com/kdelimpasis/Image-2x-zooming-kernels/assets/94488062/6b54dc68-9e7f-4c54-8a0c-ed50254d86b8)
 ## Interpolation methods supported
@@ -35,7 +35,7 @@ The main function is `image2D_zoom_final_fun`, which accepts 2 input arguments: 
     
 The output is a 2N x 2N x K array, whose kth slice (k=1,2,..,K) is the zoomed image using the kth method.
 
-Example:
+__Example__:
 `Ix2=image2D_zoom_final_fun(I,[1,0,0,0,1])`
 
 The Hermite and the OMOM deg. 4 will be applied to I. The output Ix2 will be of size 2N x 2N x 5. Thus `Ix2(:,:P,1)` is the resulting zoom using Hermite, `Ix2(:,:P,5)` is the resulting zoom using OMOM4, whereas `Ix2(:,:P,2)`, `Ix2(:,:P,3)`, `Ix2(:,:P,4)` contain zeros.  
@@ -48,7 +48,7 @@ In addition to the GNU license in the relevant file of this repository, the foll
 1. Anyone can freely use, or modify this code for research purposes, provided that this repository is cited and the References [1] and [2] are also cited.
 2. Despite the great effort we spent in developing theory and implementing this code, no warranties of any kind are provided, related to this repository. Anyone who uses this code, does so on his/her own responsibility. The authors of this code and relevant publications will never accept any kind of liability steming from using this code in any way.
 
-##References
+## References
 
 [1] Kechriniotis, A. I., Delibasis, K. K., Oikonomou, I., & Tsigaridas, G. N. (2024). Classical multivariate Hermite coordinate interpolation on n-dimensional grids. Journal of Computational and Applied Mathematics, 449, 115962.
 
