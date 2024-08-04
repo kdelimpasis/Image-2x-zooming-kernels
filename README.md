@@ -29,10 +29,16 @@ The main function is image2D_zoom_final_fun, which accepts 2 input arguments: an
 8. B-Spline deg=3
 9. B-Spline deg=5
 10. Cubic poly deg=3, 8-point
-11. bicubic custom
+11. bicubic custom.
+    
 The output is a 2N x 2N x K array, whose kth slice (k=1,2,..,K) is the zoomed image usith the kth method.
-Example: 
+
+Example:
+Ix2=image2D_zoom_final_fun(I,[1,0,0,0,1])
+The Hermite and the OMOM deg. 4 will be applied to I. The output Ix2 will be of size 2N x 2N x 5. Thus Ix2(:,:P,1) is the resulting zoom using Hermite, Ix2(:,:P,5) is the resulting zoom using OMOM4, whereas Ix2(:,:P,2), Ix2(:,:P,3), Ix2(:,:P,4) contains zeros.  
 
 References
+
 [1] Kechriniotis, A. I., Delibasis, K. K., Oikonomou, I., & Tsigaridas, G. N. (2024). Classical multivariate Hermite coordinate interpolation on n-dimensional grids. Journal of Computational and Applied Mathematics, 449, 115962.
+
 [2] Delibasis, K. K., Oikonomou, I., Kechriniotis, A. I., & Tsigaridas, G. N. (2024). Hermite coordinate interpolation kernels: application to image zooming. arXiv preprint arXiv:2403.13195.
